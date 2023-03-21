@@ -1,0 +1,2 @@
+HealthCheck/HealthCheck.txt,HealthCheck/Ok.txt
+IC/cancel.txt,HealthCheck/inquiry_proc9_debug.txt

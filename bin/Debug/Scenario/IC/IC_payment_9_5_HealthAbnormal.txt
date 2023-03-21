@@ -1,0 +1,2 @@
+HealthCheck/HealthCheck.txt,HealthCheck/Ok.txt
+IC/sale.txt,HealthCheck/abnormal_proc9.txt

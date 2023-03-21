@@ -1,0 +1,2 @@
+HealthCheck/HealthCheck.txt,HealthCheck/Ok.txt
+IC/balanceInquiry.txt,IC/Inquiry_abnormal.txt

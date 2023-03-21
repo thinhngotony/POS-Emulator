@@ -1,0 +1,14 @@
+{
+		"controlInfo":{
+			"mode": 0,
+			"service": "0100007",
+			"biz": 1,
+			"procResult": 9,
+			"outputId": "",
+			"termIdentityNo": "",
+			"dateTime": "2022/06/21 14:32:31",
+			"errorCode": "TFWL0001",
+			"errorCodeDetail1": "TKOC1528",
+			"errorCodeDetail2": ""
+		}
+}

@@ -1,0 +1,2 @@
+Scenario_IC/HealthCheck.txt,Scenario_IC/Ser Com_Normal_Health Check_Normal 1.json
+Scenario_IC/balance.txt,Scenario_IC/IC_Normal_Balance Inquiry_Error (No Printed Information)_Clerk Call Target_3.json

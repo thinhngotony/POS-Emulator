@@ -1,0 +1,2 @@
+Scenario_IC/HealthCheck.txt,Scenario_IC/Ser Com_Normal_Health Check_Normal 1.json
+Scenario_IC/sale.txt,Scenario_IC/IC_Normal_Sales_Normal_002.json

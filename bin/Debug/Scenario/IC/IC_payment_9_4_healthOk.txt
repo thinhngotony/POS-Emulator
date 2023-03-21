@@ -1,0 +1,2 @@
+HealthCheck/HealthCheck.txt,HealthCheck/Ok.txt
+IC/sale.txt,HealthCheck/Ok_wait2.txt

@@ -1,0 +1,3 @@
+HealthCheck/HealthCheck.txt,HealthCheck/Ok.txt
+IC/cancel.txt,HealthCheck/Ok_wait2_inquiry.txt
+IC/cancel.txt,IC/sale_normal.txt
