@@ -1,2 +1,0 @@
-HealthCheck/HealthCheck.txt,HealthCheck/Ok.txt
-IC/balanceInquiry.txt,IC/inquiry_error_TFWL0001_TKOE0001_proc9.txt

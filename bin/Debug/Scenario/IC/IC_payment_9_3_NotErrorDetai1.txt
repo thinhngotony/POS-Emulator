@@ -1,2 +1,0 @@
-HealthCheck/HealthCheck.txt,HealthCheck/Ok.txt
-IC/sale.txt,IC/sale_error_TFWL0001_TKOC1528.txt

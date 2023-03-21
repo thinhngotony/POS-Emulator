@@ -38,11 +38,12 @@ C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\S
 C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Saturn1000LaneIF.Test.exe
 C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Saturn1000LaneIF.Test.pdb
 C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Saturn1000LaneIF.dll
-C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\log4net.dll
-C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\LinqBridge.dll
-C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Newtonsoft.Json.xml
-C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Saturn1000LaneIF.pdb
-C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\log4net.xml
 C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\obj\Debug\Saturn1000LaneIF.Test.csproj.CopyComplete
 C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\obj\Debug\Saturn1000LaneIF.Test.exe
 C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\obj\Debug\Saturn1000LaneIF.Test.pdb
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Assets\Logo.ico
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\DLL\Saturn1000LaneIF.dll
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Json\HealthCheck\Request\HealthCheck.txt
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Json\HealthCheck\Response\HealthCheckOK.json
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Newtonsoft.Json.dll
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\DLL\Newtonsoft.Json.dll

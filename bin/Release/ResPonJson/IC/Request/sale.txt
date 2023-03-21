@@ -1,9 +1,0 @@
-{
-		"mode":	0,
-		"service": "0100007",
-		"biz": 1,
-		"logOutputMode": 0,
-		"amount": 99999,
-		"outputId": "",
-		"printMode": 0
-}

@@ -4,7 +4,6 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -19,7 +18,7 @@ namespace Vjp.Saturn1000LaneIF.Test
         public static Serial serial = null;
         private delegate void SafeCallDelegate(string text);
         //new attribute
-        List<string> listBranch= new List<string>();
+        List<string> listBranch = new List<string>();
         int seletedRow = 0;
         int countRequest = 0;
         string logFilePath = "";
@@ -45,11 +44,11 @@ namespace Vjp.Saturn1000LaneIF.Test
             cbbTypeSce.DataSource = getAllFolderNameInFolder(scenarioPath);
             updateNextComboBox(cbbScenario);
             LoadScenario();
-            watchLogFile(File.ReadAllText("SourcePath.ini").Replace("\r\n","")+@"\Log");
+            watchLogFile(File.ReadAllText("SourcePath.ini").Replace("\r\n", "") + @"\Log");
             dgvResPon.AutoGenerateColumns = false;
 
         }
-        
+
         public void showMessage(string msg)
         {
             // https://docs.microsoft.com/en-us/dotnet/desktop/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls?view=netframeworkdesktop-4.8
@@ -125,7 +124,6 @@ namespace Vjp.Saturn1000LaneIF.Test
             checkMouseSend = true;
         }
 
-        //new Event
         //catch file change and assign the path to logFilePath
         private void W_Changed(object sender, FileSystemEventArgs e)
         {
@@ -155,12 +153,12 @@ namespace Vjp.Saturn1000LaneIF.Test
             string biz = "";
             txtposTranNum = "";
             foreach (string line in txtReceiveMessage.Lines)
-            {            
+            {
                 if (line.Contains("outputId") || line.Contains("trSumId"))
                 {
                     if (!ckbLockOutID.Checked)
                         txtOldOutputID.Text = txtOutputID.Text;
-                    txtOutputID.Text = line.Split(':')[1].Trim().Replace("\"","").Replace(",","");
+                    txtOutputID.Text = line.Split(':')[1].Trim().Replace("\"", "").Replace(",", "");
                 }
                 if (line.Contains("posTranNum"))
                 {
@@ -181,19 +179,20 @@ namespace Vjp.Saturn1000LaneIF.Test
             }
 
             //auto response
-            if (ckbAuto.Checked == true) {
+            if (ckbAuto.Checked == true)
+            {
                 bool matchRequest = false;
                 foreach (DataGridViewRow row in dgvResPon.Rows)
                 {
                     try
                     {
                         string requestPath = getPath("Request", row.Cells[0].Value.ToString());
-                        if (isMatchRequest(requestPath, service,biz))
+                        if (isMatchRequest(requestPath, service, biz))
                         {
                             string responsePath = getPath("Response", row.Cells[1].Value.ToString());
                             string requestFile = requestPath.Split(Path.AltDirectorySeparatorChar)[3];
                             string responseFile = responsePath.Split(Path.AltDirectorySeparatorChar)[3];
-                            txtNotify.AppendText(requestFile+" => " + responseFile + Environment.NewLine);
+                            txtNotify.AppendText(requestFile + " => " + responseFile + Environment.NewLine);
                             txtSendMessage.Text = File.ReadAllText(responsePath);
                             if (ckbAutoReplace.Checked)
                                 setOutputID(txtOutputID.Text);
@@ -212,7 +211,7 @@ namespace Vjp.Saturn1000LaneIF.Test
                             string requestPath = getPath("Request", item.ToString());
                             if (isMatchRequest(requestPath, service, biz))
                             {
-                                txtNotify.AppendText("receive "+ item.ToString() + " request" + Environment.NewLine);
+                                txtNotify.AppendText("receive " + item.ToString() + " request" + Environment.NewLine);
                                 matchRequest = true;
                             }
                         }
@@ -234,7 +233,7 @@ namespace Vjp.Saturn1000LaneIF.Test
                 if (service == "3000001")
                     if (biz == "1")
                     {
-                        txtSendMessage.Text = File.ReadAllText("HealthCheckOK.json");
+                        txtSendMessage.Text = File.ReadAllText("Json/HealthCheck/HealthCheckOK/ResponseHealthCheckOK.json");
                         setOutputID(txtOutputID.Text);
                         serial.SendMsg(txtSendMessage.Text);
                     }
@@ -321,7 +320,7 @@ namespace Vjp.Saturn1000LaneIF.Test
             }
             catch (Exception ex)
             {
-                txtNotify.AppendText("Not found file   " +path+ Environment.NewLine);
+                txtNotify.AppendText("Not found file   " + path + Environment.NewLine);
                 MessageBox.Show(ex.ToString());
             }
 
@@ -370,13 +369,14 @@ namespace Vjp.Saturn1000LaneIF.Test
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            string input = Interaction.InputBox("Input file name", "Name", "", (Left+Right)/2, (Top + Bottom) / 2);
-            if (input != "") {
-                string path = input.Replace(".txt","") + ".txt";
-                string fullPath = scenarioPath + @"\" +cbbTypeSce.Text + @"\"+ path;
+            string input = Interaction.InputBox("Input file name", "Name", "", (Left + Right) / 2, (Top + Bottom) / 2);
+            if (input != "")
+            {
+                string path = input.Replace(".txt", "") + ".txt";
+                string fullPath = scenarioPath + @"\" + cbbTypeSce.Text + @"\" + path;
                 if (File.Exists(fullPath))
                 {
-                    var result = MessageBox.Show("file Exists, do you want to replace!","error", MessageBoxButtons.YesNo);
+                    var result = MessageBox.Show("file Exists, do you want to replace!", "error", MessageBoxButtons.YesNo);
                     if (result != DialogResult.Yes)
                         return;
                     else
@@ -499,9 +499,11 @@ namespace Vjp.Saturn1000LaneIF.Test
                 JObject json = JObject.Parse(txtSendMessage.Text);
                 JObject token = json["controlInfo"] as JObject;
                 if (token.HasValues && token.ContainsKey("outputId"))
-                        json["controlInfo"]["outputId"] = outputID;
+                    json["controlInfo"]["outputId"] = outputID;
                 txtSendMessage.Text = json.ToString();
-            } catch (JsonReaderException ex) {
+            }
+            catch (JsonReaderException ex)
+            {
                 //MessageBox.Show(ex.ToString());
             }
         }
@@ -543,7 +545,9 @@ namespace Vjp.Saturn1000LaneIF.Test
                     dgvResPon.Rows.Add(splitData[0], splitData[1]);
                     dgvResPon.Update();
                 }
-            }catch(Exception ex) { 
+            }
+            catch (Exception ex)
+            {
                 //MessageBox.Show(ex.ToString());
             }
         }
@@ -568,13 +572,14 @@ namespace Vjp.Saturn1000LaneIF.Test
                 for (int i = 0; i < len; i++)
                 {
                     temp[i] = cbbBranch.Text + "/" + temp[i];
-                } 
+                }
                 cbbResponse.DataSource = temp;
             }
-            catch(Exception ex) { 
+            catch (Exception ex)
+            {
                 //MessageBox.Show(ex.ToString());
             }
-}
+        }
 
         private void updateNextComboBox(ComboBox cbb)
         {
@@ -584,10 +589,11 @@ namespace Vjp.Saturn1000LaneIF.Test
                 cbb.Text = "";
                 cbb.DataSource = getAllFileNameInFolder(ScenarioPath);
             }
-            catch(Exception ex) { 
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString());
             }
-}
+        }
 
         private string getPath(ComboBox cb)
         {
@@ -603,7 +609,7 @@ namespace Vjp.Saturn1000LaneIF.Test
             return null;
         }
 
-        private string getPath(string type,string path)
+        private string getPath(string type, string path)
         {
             string[] text = path.Split(Path.AltDirectorySeparatorChar);
             if (type == "Request")
@@ -637,9 +643,9 @@ namespace Vjp.Saturn1000LaneIF.Test
                 {
                     return;
                 }
-                ShowWindow(handle,1);
+                ShowWindow(handle, 1);
             }
-            
+
         }
     }
 }

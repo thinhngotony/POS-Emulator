@@ -1,4 +1,0 @@
-HealthCheck/HealthCheck.txt,HealthCheck/Ok.txt
-IC/balanceInquiry.txt,IC/balance_inquiry_10000.txt
-IC/sale.txt,IC/sale_normal.txt
-IC/cancel.txt,IC/cancel_success.txt

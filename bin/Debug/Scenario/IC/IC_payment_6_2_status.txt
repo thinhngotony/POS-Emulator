@@ -1,3 +1,0 @@
-HealthCheck/HealthCheck.txt,HealthCheck/Ok.txt
-IC/cancel.txt,IC/cancel_fail_wait2.txt
-IC/cancel.txt,status/sample_status.txt
