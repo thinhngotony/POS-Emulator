@@ -44,7 +44,7 @@ namespace Vjp.Saturn1000LaneIF.Test
             cbbTypeSce.DataSource = getAllFolderNameInFolder(scenarioPath);
             updateNextComboBox(cbbScenario);
             LoadScenario();
-            watchLogFile(File.ReadAllText("SourcePath.ini").Replace("\r\n", "") + @"\Log");
+            watchLogFile(File.ReadAllText("Common/SourcePath.ini").Replace("\r\n", "") + @"\Log");
             dgvResPon.AutoGenerateColumns = false;
 
         }
@@ -433,7 +433,7 @@ namespace Vjp.Saturn1000LaneIF.Test
             catch (Exception ex)
             {
                 txtLoadScreen.AppendText("Not found log file" + Environment.NewLine);
-                txtLoadScreen.AppendText("see EmoneyPath.ini file");
+                txtLoadScreen.AppendText("Check SourcePath.ini file");
                 MessageBox.Show(ex.ToString());
             }
         }
@@ -451,13 +451,21 @@ namespace Vjp.Saturn1000LaneIF.Test
 
         private List<string> getAllFolderNameInFolder(string path)
         {
-            string[] folder = Directory.GetDirectories(path);
-            int len = folder.Length;
-            for (int i = 0; i < len; i++)
+            try
             {
-                folder[i] = Path.GetFileName(folder[i]);
+                string[] folder = Directory.GetDirectories(path);
+                int len = folder.Length;
+                for (int i = 0; i < len; i++)
+                {
+                    folder[i] = Path.GetFileName(folder[i]);
+                }
+                return new List<string>(folder);
+            } catch (Exception e)
+            {
+                //MessageBox.Show(e.ToString());  
+                return null;
             }
-            return new List<string>(folder);
+
         }
 
         private string getJsonValueByLine(string line)
@@ -591,7 +599,7 @@ namespace Vjp.Saturn1000LaneIF.Test
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                //MessageBox.Show(ex.ToString());
             }
         }
 

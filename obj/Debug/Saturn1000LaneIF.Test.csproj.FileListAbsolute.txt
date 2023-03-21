@@ -47,3 +47,8 @@ C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\S
 C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Json\HealthCheck\Response\HealthCheckOK.json
 C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Newtonsoft.Json.dll
 C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\DLL\Newtonsoft.Json.dll
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\Common\SourcePath.ini
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\config.ini
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\DLL\log4net.dll
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\log4net.dll
+C:\Users\thinhngotony\Downloads\source test app\source test app\IF_Test_App v2\Saturn1000LaneIF.TestOkNhat\bin\Debug\LinqBridge.dll
